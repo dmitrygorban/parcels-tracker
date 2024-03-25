@@ -43,7 +43,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: <Docker ID>/parcels-tracker
+          images: ${{ secrets.DOCKER_USERNAME }}/parcels-tracker
 
       - name: Build and push image
         uses: docker/build-push-action@v5
